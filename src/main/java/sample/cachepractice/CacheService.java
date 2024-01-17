@@ -16,10 +16,20 @@ public class CacheService {
     public String cacheNameBy(long id) {
         log.info("서비스 로직 호출");
 
+        delay();
+
         CacheEntity cacheEntity = cacheRepository.findById(id)
                 .orElseThrow(IllegalArgumentException::new);
 
         return cacheEntity.getName();
+    }
+
+    private static void delay() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
