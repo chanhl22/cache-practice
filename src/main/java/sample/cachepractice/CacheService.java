@@ -24,6 +24,18 @@ public class CacheService {
         return cacheEntity.getName();
     }
 
+    @Cacheable(value = "cacheStoreV2", key = "#id")
+    public String cacheNameV2By(long id) {
+        log.info("서비스 로직 호출, id = {}", id);
+
+        delay();
+
+        CacheEntity cacheEntity = cacheRepository.findById(id)
+                .orElseThrow(IllegalArgumentException::new);
+
+        return cacheEntity.getName();
+    }
+
     private static void delay() {
         try {
             Thread.sleep(2000);

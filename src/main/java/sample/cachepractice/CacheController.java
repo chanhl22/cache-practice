@@ -24,4 +24,15 @@ public class CacheController {
         return name;
     }
 
+    @PostMapping("/cache/v2")
+    public String cacheV2(@RequestBody long id) {
+        long start = System.currentTimeMillis();
+        String name = cacheService.cacheNameV2By(id);
+        long end = System.currentTimeMillis();
+
+        log.info("수행시간 = {}", end - start);
+
+        return name;
+    }
+
 }
