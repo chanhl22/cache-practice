@@ -1,0 +1,19 @@
+### 캐시 삭제 테스트 v1
+POST localhost:8080/cache/delete/v1
+Content-Type: application/json
+
+### 캐시 삭제 테스트 v2
+POST localhost:8080/cache/delete/v2
+Content-Type: application/json
+
+1
+
+### 캐시 삭제 테스트 v3
+POST localhost:8080/cache/delete/v3
+Content-Type: application/json
+
+1
+
+### 캐시 삭제 테스트 v4
+POST localhost:8080/cache/delete/v4
+Content-Type: application/json

@@ -1,0 +1,11 @@
+### 캐시 생성 테스트 v1
+POST localhost:8080/cache/create/v1
+Content-Type: application/json
+
+2
+
+### 캐시 테스트 v2
+POST localhost:8080/cache/create/v2
+Content-Type: application/json
+
+1
