@@ -27,7 +27,7 @@ public class CacheService {
 
     @Cacheable(value = "cacheStoreV2", key = "#id")
     public String findNameV2By(long id) {
-        log.info("서비스 로직 호출, id = {}", id);
+        log.info("서비스 로직 호출");
 
         delay();
 
